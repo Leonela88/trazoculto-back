@@ -1,0 +1,12 @@
+package com.trazoculto.editorial.entity.enums;
+
+public enum ServiceType {
+INFORME_DE_LECTURA,
+CORRECCIÓN_DE_ESTILO,
+CORRECCIÓN_ORTOTIPOGRÁFICA,
+ORIENTACIÓN_AUTORES_NUEVOS,
+MACROEDICIÓN,
+MICROEDICIÓN,
+OTROS
+
+}

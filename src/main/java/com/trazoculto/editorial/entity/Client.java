@@ -14,17 +14,17 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name= "administrators")
-public class Administrator {
+@Table(name="clients")
+public class Client {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(unique = true, nullable = false)
-    private String email;
+  @Column(nullable = false)
+  private String name;
 
-    @Column(nullable = false)
-    private String password;
+  @Column (unique = true, nullable = false) 
+  private String email;
 
 }
