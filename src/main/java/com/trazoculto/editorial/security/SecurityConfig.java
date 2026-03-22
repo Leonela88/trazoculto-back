@@ -21,11 +21,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/h2-console/**").permitAll() 
                         // .requestMatchers("/api/public/**").permitAll() // Public routes (landing page)
-                        .anyRequest().authenticated() 
+                        .anyRequest().permitAll() 
+                        // .anyRequest().authenticated() 
                 )
                 .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin())) 
                 .httpBasic(Customizer.withDefaults()) 
-                .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))//
+                ;
 
                 return http.build();
     }
