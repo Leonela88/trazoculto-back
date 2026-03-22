@@ -3,8 +3,8 @@ package com.trazoculto.editorial.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.trazoculto.editorial.dto.ClientRegisterRequestDTO;
-import com.trazoculto.editorial.dto.ClientRegisterResponseDTO;
+import com.trazoculto.editorial.dto.request.ClientRegisterRequestDTO;
+import com.trazoculto.editorial.dto.response.ClientRegisterResponseDTO;
 import com.trazoculto.editorial.service.ClientService;
 
 import org.springframework.http.HttpStatus;

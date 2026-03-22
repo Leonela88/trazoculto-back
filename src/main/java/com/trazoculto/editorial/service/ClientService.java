@@ -1,7 +1,7 @@
 package com.trazoculto.editorial.service;
 
-import com.trazoculto.editorial.dto.ClientRegisterRequestDTO;
-import com.trazoculto.editorial.dto.ClientRegisterResponseDTO;
+import com.trazoculto.editorial.dto.request.ClientRegisterRequestDTO;
+import com.trazoculto.editorial.dto.response.ClientRegisterResponseDTO;
 
 public interface ClientService {
 

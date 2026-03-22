@@ -2,8 +2,8 @@ package com.trazoculto.editorial.service;
 
 import org.springframework.stereotype.Service;
 
-import com.trazoculto.editorial.dto.ClientRegisterRequestDTO;
-import com.trazoculto.editorial.dto.ClientRegisterResponseDTO;
+import com.trazoculto.editorial.dto.request.ClientRegisterRequestDTO;
+import com.trazoculto.editorial.dto.response.ClientRegisterResponseDTO;
 import com.trazoculto.editorial.entity.Client;
 import com.trazoculto.editorial.repository.ClientRepository;
 
