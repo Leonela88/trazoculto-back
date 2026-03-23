@@ -1,6 +1,6 @@
 package com.trazoculto.editorial.dto.request;
 
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
 
 import com.trazoculto.editorial.entity.enums.State;
 
@@ -19,7 +19,11 @@ public record ProjectRegisterRequestDTO(
 
         @Size(max = 1000, message = "Notes cannot exceed 1000 characters") String notes,
 
-        @Future(message = "The date canoot be past") ZonedDateTime dateOfSubmission
+        @Future(message = "The date canoot be past") LocalDate dateOfSubmission,
+
+        @NotNull Long clientId,
+
+        @NotNull Integer editingServiceId
 
 ) {
 }

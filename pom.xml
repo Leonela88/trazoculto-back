@@ -67,11 +67,20 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Source: https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
 		<dependency>
-    <groupId>org.mapstruct</groupId>
-    <artifactId>mapstruct</artifactId>
-    <version>1.6.3</version>
-</dependency>
+    		<groupId>org.mapstruct</groupId>
+    		<artifactId>mapstruct</artifactId>
+    		<version>1.6.3</version>
+    		<scope>compile</scope>
+		</dependency>
+		<!-- Source: https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor -->
+		<!-- <dependency>
+    		<groupId>org.mapstruct</groupId>
+    		<artifactId>mapstruct-processor</artifactId>
+    		<version>1.6.3</version>
+    		<scope>provided</scope>
+		</dependency> -->
 	</dependencies>
 
 	<build>
@@ -79,7 +88,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version> <configuration>
+				<configuration>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
@@ -96,7 +105,7 @@
                 <artifactId>mapstruct-processor</artifactId>
                 <version>1.6.3</version>
             </path>
-					</annotationProcessorPaths>
+			</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 			<plugin>

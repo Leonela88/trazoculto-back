@@ -1,6 +1,7 @@
 package com.trazoculto.editorial.entity;
 
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
+
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.trazoculto.editorial.entity.enums.State;
@@ -43,9 +44,9 @@ public class Project {
 
     @CreatedDate
     @Column(updatable = false)
-    private ZonedDateTime createdAt;
+    private LocalDate createdAt;
 
-    private ZonedDateTime dateOfSubmission;
+    private LocalDate dateOfSubmission;
  
     @ManyToOne
     @JoinColumn(name = "client_id",nullable = false)
