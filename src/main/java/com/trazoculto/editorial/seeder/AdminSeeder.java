@@ -36,6 +36,9 @@ public class AdminSeeder implements CommandLineRunner{
             System.out.println("=> User admin created by default.");
         }
 
+        
+        
+
     }
 
 }
