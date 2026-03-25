@@ -1,4 +1,4 @@
-# Trazo Culto - Editorial Management System
+# Trazoculto - Editorial Management System
 
 Digital solution for managing the editorial workflow, connecting authors, editors, and publishing projects in a centralized platform.
 
