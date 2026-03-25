@@ -10,7 +10,7 @@ Digital solution for managing the editorial workflow, connecting authors, editor
 
 ## General Info
 ***
-**Trazo Culto** is a management system designed for a specialized publishing house. It streamlines the workflow between authors and editors, allowing for efficient project tracking, client registration, and manuscript status management.
+**Trazoculto** is a management system designed for a specialized publishing house. It streamlines the workflow between authors and editor, allowing for efficient project tracking, client registration, and manuscript status management.
 
 **Project Status**: `MVP (Minimum Viable Product) - In Development`  
 The application currently supports core operations for managing the editorial pipeline and client database.
@@ -29,17 +29,17 @@ The application currently supports core operations for managing the editorial pi
 
 ## Features
 ***
-### 📑 Project Management (CRUD)
+###  Project Management (CRUD)
 * **Create**: Register new editorial projects with specific metadata.
 * **Read**: List all active projects using optimized DTOs (Short Response) for better performance.
 * **Update**: Modify project details and track status changes.
 * **Delete**: Remove obsolete or cancelled projects from the system.
 
-### 👥 Client Administration
+###  Client Administration
 * **Registration**: Securely add new authors and collaborators to the database.
 * **Relationship**: Link clients directly to their respective editorial projects.
 
-### 🔐 Security & Integration
+###  Security & Integration
 * **Basic Authentication**: Secured endpoints requiring valid credentials for data access.
 * **CORS Policy**: Configured to allow secure communication between the Vite frontend and Spring Boot backend.
 * **Global Interceptors**: Centralized error handling and automatic token attachment for all API requests.
