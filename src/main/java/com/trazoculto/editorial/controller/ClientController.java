@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("/api/v1/clients")
+@RequestMapping("/api/clients")
 public class ClientController {
 
     private final ClientService clientService;

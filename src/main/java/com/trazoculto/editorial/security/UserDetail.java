@@ -24,7 +24,7 @@ public class UserDetail implements UserDetailsService{
         return User.builder()
                 .username(admin.getEmail()) 
                 .password(admin.getPassword())
-                .authorities("ADMIN")
+                .roles("ADMIN")
                 .build();
     }
 
