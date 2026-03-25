@@ -21,8 +21,6 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) 
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/h2-console/**").permitAll() 
-                        // .requestMatchers("/api/public/**").permitAll() // Public routes (landing page)
-                        // .anyRequest().permitAll() 
                         .anyRequest().authenticated() 
                 )
                 .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin())) 
