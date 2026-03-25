@@ -7,9 +7,12 @@ import com.trazoculto.editorial.dto.request.ClientRegisterRequestDTO;
 import com.trazoculto.editorial.dto.response.ClientRegisterResponseDTO;
 import com.trazoculto.editorial.service.ClientService;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,5 +41,9 @@ public class ClientController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-
+    @GetMapping
+    public ResponseEntity<List<ClientRegisterResponseDTO>> getAll() {
+        List<ClientRegisterResponseDTO> response = clientService.getAllClients();
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }

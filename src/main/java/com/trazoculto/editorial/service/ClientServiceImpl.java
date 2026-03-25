@@ -1,5 +1,7 @@
 package com.trazoculto.editorial.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.trazoculto.editorial.dto.request.ClientRegisterRequestDTO;
@@ -20,14 +22,14 @@ public class ClientServiceImpl implements ClientService {
     public ClientRegisterResponseDTO clientRegister(ClientRegisterRequestDTO dto) {
 
         clientRepository.findByEmail(dto.email())
-        .ifPresent(client -> {
-            throw new RuntimeException("The email" + dto.email() + " is already registered.");
-        });
-        
+                .ifPresent(client -> {
+                    throw new RuntimeException("The email" + dto.email() + " is already registered.");
+                });
+
         Client client = new Client();
         client.setName(dto.name());
         client.setEmail(dto.email());
- 
+
         Client savedClient = clientRepository.save(client);
 
         return new ClientRegisterResponseDTO(
@@ -37,12 +39,23 @@ public class ClientServiceImpl implements ClientService {
 
     }
 
-     @Override
+    @Override
     public void deleteClient(Long id) {
         if (!clientRepository.existsById(id)) {
             throw new RuntimeException("Client not found");
         }
         clientRepository.deleteById(id);
+    }
+
+    @Override
+    public List<ClientRegisterResponseDTO> getAllClients() {
+        return clientRepository.findAll()
+                .stream()
+                .map(client -> new ClientRegisterResponseDTO(
+                        client.getId(),
+                        client.getName(),
+                        client.getEmail()))
+                .toList();
     }
 
 }
